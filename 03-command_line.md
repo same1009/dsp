@@ -12,7 +12,48 @@ these in a couple of hours.
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do, focused on things that are new, interesting, or otherwise worth remembering.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+```
+pwd - print working directory 
+cd - change directory
+ls  - list directory contents
+     -a all
+     -A almost all
+     -l long format
+     -d details about directory
+     -r reverse order
+     
+mkdir - create directories
+cp - copy files and directory
+     -i interactive
+     -u update
+     -v verbose
+mv - move/rename files and directory
+cat - displays/copies/combined files
+rm - remove files and directories
+     -i interactive
+     -u update
+     -v verbose
+less - program is view text files
+find - find file
+locate - find files by name
+xargs - Accepts input from standard in- put and converts it into an argument list for a specified command
+
+
+wildcards
+* Matches any character
+? Matches single character
+[abc..] Matches characters that are a member in the set
+[!abc..] Matches characters that are not a member in the set
+[[:class:]] Matches character that are in the class
+
+classes
+[:alpha:] - Matches any alphabetic character
+[:digit:] - Matches any numeral
+[:lower:] - Matches any lowercase letter
+[:upper:] - Matches any uppercase letter
+
+```
 
 ---
 
