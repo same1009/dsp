@@ -62,11 +62,11 @@ We will also use Jupyter (IPython) notebooks, but this does not remove the need 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
 >> Sublime. There are many different features on sublime text and I have used it in the past. Some interesting features include: multi edits, using git inside of sublime. Some keyboard shortcuts of sublime includes the following:
-command + / - Comment
-command + click - Create cursors for multiple edits
-ctrl + g - Go to line number
-command + f - Find
-command + Shift + h - Replace
+* command + / - Comment
+* command + click - Create cursors for multiple edits
+* ctrl + g - Go to line number
+* command + f - Find
+* command + Shift + h - Replace
 
 
 ---
