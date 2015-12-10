@@ -38,21 +38,17 @@ less - program is view text files
 find - find file
 locate - find files by name
 xargs - Accepts input from standard in- put and converts it into an argument list for a specified command
-
-
 wildcards
 * Matches any character
 ? Matches single character
 [abc..] Matches characters that are a member in the set
 [!abc..] Matches characters that are not a member in the set
 [[:class:]] Matches character that are in the class
-
 classes
 [:alpha:] - Matches any alphabetic character
 [:digit:] - Matches any numeral
 [:lower:] - Matches any lowercase letter
 [:upper:] - Matches any uppercase letter
-
 ```
 
 ---
@@ -62,7 +58,13 @@ classes
 
 What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations of those flags are meaningful?
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+```
+'ls' lists files and directory 
+-a lists all entries
+-l lists the long format
+-lh lists it in human readable format. 
+```
 
 ---
 
@@ -71,7 +73,13 @@ What does `ls` do? What do `ls -a`, `ls -l`, and `ls -lh` do? What combinations 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > 
+```
+xargs - Accepts input from standard input and converts it into an argument list for a specified command
+find /temp -name "*.tmp" | xargs rm
+The above will find all .tmp files in the temp folder and feed it into rm. This will remove all .tmp files 
+in the /temp folder.
+```
 
 ---
 
