@@ -22,7 +22,6 @@ ls  - list directory contents
      -l long format
      -d details about directory
      -r reverse order
-     
 mkdir - create directories
 cp - copy files and directory
      -i interactive
@@ -50,7 +49,6 @@ classes
 [:lower:] - Matches any lowercase letter
 [:upper:] - Matches any uppercase letter
 ```
-
 ---
 
 
