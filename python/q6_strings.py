@@ -18,8 +18,24 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    try:
+      a=int(count)          
+      if (count<0):                 #Checks for integer
+        raise NotImplementedError
+      elif (count>=10):             #more than 10
+        print "many"
+      else:                         #more than 0, less than 10
+        print 'Number of donuts: %s' %(count)
+    except NotImplementedError:
+      print "Less than 0"
+    except:
+      print 'Not a number'
 
+donuts(-40)
+donuts (9)
+donuts(10)
+donuts('1')
+donuts('t')
 
 def both_ends(s):
     """
@@ -37,7 +53,19 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    try:
+      if (isinstance(s, basestring)==False):    #checks for string
+        raise NotImplementedError
+      if(len(s)<2):                   
+        print ""
+      else:                                   
+        print s[0:2]+s[-2:len(s)]               #splits string
+    except NotImplementedError:
+      print 'not a string'
+
+both_ends('hellohhh')
+both_ends('123456789')
+both_ends([1,2])
 
 
 def fix_start(s):
@@ -56,8 +84,17 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
-
+    try:
+      if (isinstance(s, basestring)==False):        #checks for string
+        raise NotImplementedError
+      temp=s[0]
+      new_string=s.replace(temp,'*')                #replaces chars with *
+      print new_string.replace('*',temp,1)          #replaces first * with char 
+    except NotImplementedError:
+      print 'not a string' 
+      
+fix_start('hellohejuhjh')
+fix_start([1,1])
 
 def mix_up(a, b):
     """
@@ -74,8 +111,20 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    # a
+    # b
+    try:
+      if (isinstance(a, basestring) & isinstance(b, basestring)==False):
+        raise NotImplementedError
+      else:
+        print b[0:2]+a[2:len(a)]+' '+a[0:2]+b[2:len(b)]
+    except NotImplementedError:
+      print 'not a string'
 
+mix_up('mix', 'pod')
+mix_up('dog', 'dinner')
+mix_up('pezzy', 'firm')
+mix_up(1,'jeuu')
 
 def verbing(s):
     """
@@ -91,8 +140,22 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+    try:
+      if (isinstance(s, basestring)==False):
+        raise NotImplementedError
+      if(len(s)<3):                     #checks if length is less than 3
+        print s
+      elif(s[-3:len(s)]=="ing"):        #checks if it ends in "ing"
+        print s+'ly'
+      else:   
+        print s+'ing'           
+    except NotImplementedError:
+      print 'not a string'
 
+verbing('hail')
+verbing('swiming')
+verbing('do')
+verbing([1,2])
 
 def not_bad(s):
     """
@@ -111,8 +174,23 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
 
+    try:
+      if (isinstance(s, basestring)==False):
+        raise NotImplementedError
+      if((s.find('bad')>s.find('not')) & (s.find('not')>0)):      #Checks if "not" exists and if it comes before "bad"
+        print s[0:s.find('not')]+'good'+s[s.find('bad')+3:len(s)]
+      else:
+        print s
+    except NotImplementedError:
+      print 'not a string'
+
+not_bad('This movie is not so bad')
+not_bad('This dinner is not that bad!')
+not_bad('This tea is not hot')
+not_bad("It's bad yet not")
+not_bad("It's bad")
+not_bad([12])
 
 def front_back(a, b):
     """
@@ -130,4 +208,23 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+    if(len(a)%2==1):
+      x=1
+    else:
+      x=0
+    if(len(b)%2==1):
+      y=1
+    else:
+      y=0
+
+    a_front=a[0:len(a)/2+x]
+    a_back=a[len(a)/2+x:len(a)]
+    b_front=b[0:len(b)/2+y]
+    b_back=b[len(b)/2+y:len(b)]
+
+    print a_front+b_front+a_back+b_back
+
+front_back('abcd', 'xy')
+front_back('abcde', 'xyz')
+front_back('Kitten', 'Donut')
+
