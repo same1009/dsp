@@ -44,17 +44,17 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
 
 >> Comprehensions are constructs that allow sequences to be built from other sequences. <br>
 mylist=[1,2,3,4] <br>
-squared=[x**2 for x in mylist if x%2==0] <br>
-x**2 is the output expression<br>
+squared=[x+10 for x in mylist if x%2==0] <br>
+x+10 is the output expression<br>
 x is the variable<br>
 mylist is the input sequence<br>
 the if statement is the optional predicate<br>
 Below is an example of map and filter:<br>
 filter(lambda x: x%2 == 0, mylist) <br>
-map(lambda x: x**2, mylist) <br>
+map(lambda x: x+10, mylist) <br>
 Filter applies a predicate to a sequence, and map modifies each member of a sequence. <br>
 Set comprehensions allow sets to be constructed using the same principles as list comprehensions, the only difference is that resulting sequence is a set.<br>
-{ x**2 for x in mylist if x%2==0 } <br>
+{ x+10 for x in mylist if x%2==0 } <br>
 Below is a example of a dictionary comprehensions:<br>
 MyDict = {'a':1, 'b': 2, 'c': 3, 'd':4} <br>
 mcase_frequency = { k: MyDict.get(k, 0) for k in MyDict.keys() if MyDict[k]%2==0}
