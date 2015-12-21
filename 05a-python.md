@@ -30,7 +30,11 @@ You can store values in both lists and sets. You cannot store duplicate values i
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> 
+A lambda function is a function that takes any number of arguments and returns the value of a single expression. An example of a lambda function is below: <br>
+Dict={'a':10,'b':9,'c':7} <br>
+sorted (Dict,key=lambda x:Dict[x])
+
 
 ---
 
@@ -38,7 +42,24 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Comprehensions are constructs that allow sequences to be built from other sequences. <br>
+mylist=[1,2,3,4] <br>
+squared=[x**2 for x in mylist if x%2==0] <br>
+x**2 is the output expression<br>
+x is the variable<br>
+mylist is the input sequence<br>
+the if statement is the optional predicate<br>
+Below is an example of map and filter:<br>
+filter(lambda x: x%2 == 0, mylist) <br>
+map(lambda x: x**2, mylist) <br>
+Filter applies a predicate to a sequence, and map modifies each member of a sequence. <br>
+Set comprehensions allow sets to be constructed using the same principles as list comprehensions, the only difference is that resulting sequence is a set.<br>
+{ x**2 for x in mylist if x%2==0 } <br>
+Below is a example of a dictionary comprehensions:<br>
+MyDict = {'a':1, 'b': 2, 'c': 3, 'd':4} <br>
+mcase_frequency = { k: MyDict.get(k, 0) for k in MyDict.keys() if MyDict[k]%2==0}
+
+
 
 ---
 
@@ -53,7 +74,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 937 days
 
 b.  
 ```
@@ -61,7 +82,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> 513 days
 
 c.  
 ```
@@ -69,7 +90,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> 7850 days
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
